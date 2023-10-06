@@ -1,0 +1,62 @@
+html {
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: red;
+  }
+
+  &::-webkit-scrollbar-track {
+    // background: orange;        /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+   /* creates padding around scroll thumb */
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $mainFont;
+  background-color: $bgc;
+  color: $black;
+
+}
+
+.page-container {
+  max-width: $pageMaxWidth;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $padding;
+  max-width: calc(#{$contentMaxWidth} + #{$padding} * 2);
+}
+
+.text {
+
+}
+
+.title-1 {
+
+}
+
+.title-2 {
+
+}
+
+.title-3 {
+
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+

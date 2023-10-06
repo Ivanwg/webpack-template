@@ -1,0 +1,64 @@
+$smNumber: 576;
+$mdNumber: 768;
+$lgNumber: 992;
+$xlNumber: 1200;
+$sm: $smNumber + px;
+$md: $mdNumber + px;
+$lg: $lgNumber + px;
+$xl: $xlNumber + px;
+// >=576
+@mixin mediaMinSM {
+  @media (min-width: $sm) { @content; }
+}
+
+// >= 768
+@mixin mediaMinMD {
+  @media (min-width: $md) { @content; }
+}
+
+// >= 992
+@mixin mediaMinLG {
+  @media (min-width: $lg) { @content; }
+}
+
+// >= 1200
+@mixin mediaMinXL {
+  @media (min-width: $xl) { @content; }
+}
+
+// >=576
+@mixin mediaMaxSM {
+  @media (max-width: $sm) { @content; }
+}
+
+// >= 768
+@mixin mediaMaxMD {
+  @media (max-width: $md) { @content; }
+}
+
+// >= 992
+@mixin mediaMaxLG {
+  @media (max-width: $lg) { @content; }
+}
+
+// >= 1200
+@mixin mediaMaxXL {
+  @media (max-width: $xl) { @content; }
+}
+
+@mixin iconMixin {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@mixin trAn3 {
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+@mixin desctopHover {
+  @include mediaMinMD {
+    &:hover { @content; }
+  }
+}
